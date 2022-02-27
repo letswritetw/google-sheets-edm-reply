@@ -1,0 +1,59 @@
+- var link = 'google-sheets-edm-reply'
+- var title = '用 Google Sheets 取得電子報中點擊回覆結果'
+- var description = '用 Google Sheets 取得電子報中點擊回覆結果'
+
+<!DOCTYPE html>
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title #{title} - Augustus - Let's Write
+
+    link(rel="canonical", href=`https://www.letswrite.tw/${link}/`)
+    meta(property="og:url", content=`https://letswritetw.github.io/letswrite-${link}/`)
+
+    meta(property="fb:app_id", content="911000986339138")
+    meta(property="og:type", content="website")
+
+    meta(property="og:site_name", content="Let's Write")
+    meta(property="og:title", content=`${title} - Augustus - Let's Write`)
+    meta(itemprop="name", content=`${title} - Augustus - Let's Write`)
+
+    meta(name="description", content=description)
+    meta(property="og:description", content=description)
+    meta(itemprop="description", content=description)
+
+    meta(itemprop="image", content=`https://letswritetw.github.io/letswrite-${link}/fb.jpg`)
+    meta(property="og:image", content=`https://letswritetw.github.io/letswrite-${link}/fb.jpg`)
+    meta(property="og:image:width", content="1200")
+    meta(property="og:image:height", content="630")
+    meta(property="og:image:alt", content=title)
+
+    link(rel="shortcut icon", href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png")
+
+    //- css
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css", media="screen")
+    link(rel="stylesheet", href="dist/style.min.css", media="screen")
+
+    // Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PGQ9WQT');
+  body
+
+    // Google Tag Manager (noscript)
+    noscript
+      iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PGQ9WQT", height="0", width="0", style="display:none;visibility:hidden")
+    
+    #app.container
+      img(src="https://i.imgur.com/G4WzdAl.jpg", alt="用 Google Sheets 取得電子報中點擊回覆結果")
+
+      .info
+        h1 用 Google Sheets 取得電子報中點擊回覆結果
+        p#thanks 謝謝您的訂閱，祝您有個美好的一天~
+
+    script(src="dist/main.min.js")
