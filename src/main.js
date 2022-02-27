@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 提交到 Google 表單
   if(email) {
-    let formUri = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSd6oVaoHcBe1smAYMfIeAFDA5ifOBPY2-bdGRjzMWLXCV96xw/formResponse';
-    let key_result = 'entry.1290516544';
-    let key_email = 'entry.265887320';
+    const formUri = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSd6oVaoHcBe1smAYMfIeAFDA5ifOBPY2-bdGRjzMWLXCV96xw/formResponse';
+    const key_result = 'entry.1290516544';
+    const key_email = 'entry.265887320';
 
     const myHeaders = new Headers();
     const formdata = new FormData();
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 清掉網址
     setTimeout(() => {
-      let r = result === '是' ? 'y' : 'n';
-      let cleanUri = `${location.pathname}?result=${r}`;
+      const r = getSearch('result');
+      const cleanUri = `${location.pathname}?result=${r}`;
       history.pushState('', '', cleanUri);
     }, 1000);
   }
