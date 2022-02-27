@@ -21,13 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
   result === '是' ? thanks = '謝謝您的訂閱，祝您有個美好的一天~' : thanks = '蝦密，你竟然不訂！好啦，還是祝您有個美好的一天~';
   document.getElementById('thanks').textContent = thanks;
 
+  // 提交到 Google 表單
   if(email) {
-    // A、B 版給不同的 Google Sheets 值
     let formUri = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSd6oVaoHcBe1smAYMfIeAFDA5ifOBPY2-bdGRjzMWLXCV96xw/formResponse';
     let key_result = 'entry.1290516544';
     let key_email = 'entry.265887320';
 
-    // 傳送資料到 Google Sheet
     const myHeaders = new Headers();
     const formdata = new FormData();
     formdata.append(key_email, email);
